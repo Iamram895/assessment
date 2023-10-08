@@ -1,0 +1,17 @@
+type Country {
+  id: ID!
+  name: String!
+  populations: Int
+  year: Int
+  countryCode: String!
+}
+
+type Query {
+  getCountriesDetails(
+   countryCode: [String]
+    fromYear: Int
+    endYear: Int
+    limit: Int
+    offet: Int
+  ): [Country!]
+}
